@@ -81,6 +81,8 @@ Before commencing modelling, I explored the data to explore any trends within th
 
 <img src="https://user-images.githubusercontent.com/96108711/150025489-aba43c28-6672-495c-9d9d-f204f034fd03.png" width="425" height="400" /> <img src="https://user-images.githubusercontent.com/96108711/150025528-ee3c5cde-815e-4b18-ba2f-64ace569dc23.png" width="525" height="400" /> 
 
+- Majority of males and females aged 18-59 years orginate from: Democratic Republic of Congo, Afghanistan, Syria, Somalia and Yemen.
+<img src="https://user-images.githubusercontent.com/96108711/150039041-4f1e54f4-521a-4c1f-a019-d96a3322bdb3.png" width="1000" height="600" />
 
 - Many, almost all of the people being displaced are being displaced as a group, presumably families, with many having infants under 4 years old. 
 
