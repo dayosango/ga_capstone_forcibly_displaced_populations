@@ -21,10 +21,10 @@ This project was cultivated with international humanitarian organisations in min
 
 ## Repository Contents ##
 
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Model and Evaluation
-- Data Visualisation Images
+- [Data Cleaning](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/blob/main/Data%20Cleaning/Importing%20and%20Cleaning.ipynb)
+- [Exploratory Data Analysis (EDA)](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/tree/main/EDA/.ipynb_checkpoints)
+- [Models and Evaluation](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/tree/main/Models%20and%20Evaluation/.ipynb_checkpoints)
+- [Data Visualisation Images](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/tree/main/Data%20Visualisation%20Images)
 
 ## Objectives ##
 
@@ -196,7 +196,7 @@ The features that have the greatest influence on a person being allocated indivi
 
 Essentially, this means that an individual possessing the above features will have the greatest chance of being allocated individual accommodation and not a displacement camp.
 
-Subsequently this suggests that an individual holding all or most of these named features, will have increased chances of social integration with their host community. This will not only benefit both the resettled person and host community, by preventing marginalisation and enabling resettled individuals to develop their full potential within their new community, and for peaceful co-existence.
+Subsequently this suggests that an individual holding all or most of these named features, will have increased chances of social integration within their host community. Not only will this benefit the resettled person, but also the host community, enabling resettled individuals to develop their full potential within their new community, and enocurage peaceful co-existence.
 
 Surprisingly to me, country of origin does not appear to be a major determining factor of whether a person will be allocated individual accommodation or a displacement camp. Additionally, infants aged 0-4 years old did not take priority over the other age groups (except over 60s), which **disproves** my hypothesis.
 
