@@ -186,7 +186,7 @@ It was imperative that I was able to extract the feature importances, i.e. the f
 
 ## Conclusions ##
 
-The top feature importances that have the greatest influence on a person being allocated individual accommodation and not a displacement camp were as follows (highlighted by the Random Forest Classifier model): 
+The features that have the greatest influence on a person being allocated individual accommodation and not a displacement camp were as follows (highlighted by the Random Forest Classifier model above): 
 
 - Resettling in an urban location 
 - Having a legal status of refugee
@@ -238,11 +238,11 @@ There are several avenues I would like to explore further with regards to this d
 
 It was great to combine many of the skills that I acquired over the duration of the General Assembly bootcamp, as well as getting hands-on experience of classic machine learning algorithms in this end-to-end independent data science project. The experience shaped my understanding of the different data science processes. I have three key learning points: 
 
-- **Data analysis will never feel complete**. There are often countless insights that can be extracted from a dataset. Similarly, there are endless ways    with which data manipulation can be carried out and for that reason, there are numerous conclusions that can be drawn from a dataset. It is         important to know when to move on from an analysis step.
+- **Data analysis will never feel complete**. There are often countless insights that can be extracted from a dataset. Similarly, there are endless ways    with which data manipulation can be carried out and for that reason, there are several different conclusions that can be drawn from a dataset. It is         important to know when to move on from an analysis step!
 
-- **EDA is there for a reason!** Admittedly, I overlooked the purpose of EDA to begin with. I learnt that valuable insights are often discovered during   the EDA process. Moreover, what is uncovered can often determine how you will manipulate your data in future steps (or conversely, going back to      cleanse your data in a more refined way).
+- **EDA is there for a reason.** Admittedly, I overlooked the purpose of EDA to begin with. I learnt that valuable insights are often discovered during   the EDA process. Moreover, what is uncovered can often determine how you will manipulate your data in future steps (or conversely, going back to      cleanse your data in a more refined way).
 
-- **Machine Learning algorithms are very sensitive to any tweaks in the data cleansing process.** This highlighted the importance of justifying the       steps carried out in the cleansing stages. This is particularly important when it comes to analysing real-world data, where the outcomes of your      model affect business decisions.
+- **Machine Learning algorithms are highly sensitive to any tweaks in the data cleansing process.** This highlighted the importance of justifying the       steps carried out in the cleansing stages. This is particularly important when it comes to analysing real-world data, where the outcomes of your      model affect business decisions.
 
 ---
 
