@@ -59,11 +59,31 @@ Cleaning and munging steps taken were as follows:
 - Dropped unnecessary columns in relation to my research problem
 - Removed foreign characters from countries 
 - Population types with few values (VDA and STA), I added to ‘Others of Concern’ population type (feature engineering)
+- Removed urban/rural locations coded as unknown or various
 - Amended feature dtypes 
 - Dropped observations prior to year 2012.
 - Binarized the target variable to produce two classes 
     - **I** for individual accommodation and **Q** for displacement camp/other
 
+## Final features ##
+
+Variable                      | Description                                    | Type of Variable
+----------------------------- | ---------------------------------------------- | ----------------
+Country of Origin             | Orginating country                             | Categorical
+Country of Asylum             | Country the person has sought asylum in        | Catgeorical
+Population Type	              | Type of population the person falls into. REF - Refugee, RET - Returned refugees, ASY - Asylum seekers, VDA - Venezuelans, IDP - Internally displaced persons, RDP - Returned IDPs, STA - Stateless persons, OOC - Others of Concern | Categorical
+Urban or Rural Location	      | Indication of whether the location they were allocated was urban or rural. An urban location is classified as a settlement with more than 5,000 inhabitants (defined by UNHCR)| Categorical
+Accommodation Type	          | Type of accommodation person was allocated. I - Individual accommodation, S - Self-settled camp, P - Planned/Managed camp, C - Collective centre, R - Reception/Transit camp, U - Undefined  | Categorical
+Female aged 0-4 years	      | Integer                                 | Discrete
+Female aged 5-11 years	      | Integer                                 | Discrete
+Female aged 12-17 years	      | Integer                                 | Discrete
+Female aged 18-59 years	      | Integer                                 | Discrete
+Female aged over 60 years	  | Integer                                 | Discrete
+Male aged 0-4 years	          | Integer                                 | Discrete
+Male aged 5-11 years	      | Integer                                 | Discrete
+Male aged 12-17 years	      | Integer                                 | Discrete
+Male aged 18-59 years	      | Integer                                 | Discrete
+Male aged over 60 years       | Integer                                 | Discrete
 
 ## Exploratory Data Analysis ##
 
@@ -77,7 +97,7 @@ Before commencing modelling, I explored the data to explore any trends within th
      - Legally classed as refugees, followed by asylum seekers. Returnees made up the smallest displaced population group. 
      - Males and females between the ages of 18 and 59 years.
 
-- The age range with the smallest group to be displaced was older adults over 60 years old.
+- The age range with the smallest number of people to be displaced was older adults over 60 years old.
 
 <img src="https://user-images.githubusercontent.com/96108711/150025489-aba43c28-6672-495c-9d9d-f204f034fd03.png" width="425" height="400" /> <img src="https://user-images.githubusercontent.com/96108711/150025528-ee3c5cde-815e-4b18-ba2f-64ace569dc23.png" width="525" height="400" /> 
 
@@ -94,7 +114,7 @@ Before commencing modelling, I explored the data to explore any trends within th
     - Canada had the greatest incoming traffic, followed by Germany and Brazil.
     - Syrian Arab Republic had the greatest outcoming traffic, followed by Somalia and Nigeria.
 
-<img src="https://user-images.githubusercontent.com/96108711/150030102-31d2ced7-64f5-4bed-b1db-e5f2844a57a2.png" width="500" height="500"/> <img src="https://user-images.githubusercontent.com/96108711/150030184-825ad524-b8a5-4824-a070-70e0b900584f.png" width="500" height="500" /> 
+<img src="https://user-images.githubusercontent.com/96108711/150030102-31d2ced7-64f5-4bed-b1db-e5f2844a57a2.png" width="400" height="400"/> <img src="https://user-images.githubusercontent.com/96108711/150030184-825ad524-b8a5-4824-a070-70e0b900584f.png" width="400" height="400" /> 
 
 ## Preliminary Chi-square Test ##
 
@@ -152,6 +172,17 @@ Linear SVM                  | 0.92                           | 0.92          | 0
 The Random Forest Classifier performed the best on unseen data, with an accuracy score of 0.96, as well as the best AUC score of 0.99.
 
 It was imperative that I was able to extract the feature importances, i.e. the feature that had the greatest effect on the prediction, based on the particular model. This ruled out my KNN model as it was not possible to extract the feature importances due to how the model works.
+
+## Evaluation ##
+
+**Confusion matrix: Random Forest Classifier (top performing model)** 
+
+<img src="https://user-images.githubusercontent.com/96108711/150639812-6ba26ead-3d7b-436c-86d3-90cb1255829d.png" width="400" height="400" />
+
+**Feature Importances**
+
+<img src="!https://user-images.githubusercontent.com/96108711/150640257-3e171474-3e73-4e54-b42f-3c5a5196ff61.png" width="400" height="700"/><img src="https://user-images.githubusercontent.com/96108711/150640287-d80ea37a-83fd-446f-8e54-542bad3b79e3.png" width="400" height="700"/>
+
 
 ## Conclusions ##
 
