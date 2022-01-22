@@ -21,10 +21,10 @@ This project was cultivated with international humanitarian organisations in min
 
 ## Repository Contents ##
 
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Model and Evaluation
-- Data Visualisation Images
+- [Data Cleaning](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/blob/main/Data%20Cleaning/Importing%20and%20Cleaning.ipynb)
+- [Exploratory Data Analysis (EDA)](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/tree/main/EDA/.ipynb_checkpoints)
+- [Models and Evaluation](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/tree/main/Models%20and%20Evaluation/.ipynb_checkpoints)
+- [Data Visualisation Images](https://github.com/dayosango/ga_capstone_forcibly_displaced_populations/tree/main/Data%20Visualisation%20Images)
 
 ## Objectives ##
 
@@ -59,11 +59,31 @@ Cleaning and munging steps taken were as follows:
 - Dropped unnecessary columns in relation to my research problem
 - Removed foreign characters from countries 
 - Population types with few values (VDA and STA), I added to ‘Others of Concern’ population type (feature engineering)
+- Removed urban/rural locations coded as unknown or various
 - Amended feature dtypes 
 - Dropped observations prior to year 2012.
 - Binarized the target variable to produce two classes 
     - **I** for individual accommodation and **Q** for displacement camp/other
 
+## Final features ##
+
+Variable                      | Description                                    | Type of Variable
+----------------------------- | ---------------------------------------------- | ----------------
+Country of Origin             | Orginating country                             | Categorical
+Country of Asylum             | Country the person sought asylum in            | Catgeorical
+Population Type	              | Type of population the person falls into. REF - Refugee, RET - Returned refugees, ASY - Asylum seekers, VDA - Venezuelans, IDP - Internally displaced persons, RDP - Returned IDPs, STA - Stateless persons, OOC - Others of Concern | Categorical
+Urban or Rural Location	      | Indication of whether the location they were allocated was urban or rural. An urban location is classified as a settlement with more than 5,000 inhabitants (defined by UNHCR)| Categorical
+Accommodation Type	          | Type of accommodation person was allocated. I - Individual accommodation, S - Self-settled camp, P - Planned/Managed camp, C - Collective centre, R - Reception/Transit camp, U - Undefined  | Categorical
+Female aged 0-4 years	      | Integer                                 | Discrete
+Female aged 5-11 years	      | Integer                                 | Discrete
+Female aged 12-17 years	      | Integer                                 | Discrete
+Female aged 18-59 years	      | Integer                                 | Discrete
+Female aged over 60 years	  | Integer                                 | Discrete
+Male aged 0-4 years	          | Integer                                 | Discrete
+Male aged 5-11 years	      | Integer                                 | Discrete
+Male aged 12-17 years	      | Integer                                 | Discrete
+Male aged 18-59 years	      | Integer                                 | Discrete
+Male aged over 60 years       | Integer                                 | Discrete
 
 ## Exploratory Data Analysis ##
 
@@ -77,7 +97,7 @@ Before commencing modelling, I explored the data to explore any trends within th
      - Legally classed as refugees, followed by asylum seekers. Returnees made up the smallest displaced population group. 
      - Males and females between the ages of 18 and 59 years.
 
-- The age range with the smallest group to be displaced was older adults over 60 years old.
+- The age range with the smallest number of people to be displaced was older adults over 60 years old.
 
 <img src="https://user-images.githubusercontent.com/96108711/150025489-aba43c28-6672-495c-9d9d-f204f034fd03.png" width="425" height="400" /> <img src="https://user-images.githubusercontent.com/96108711/150025528-ee3c5cde-815e-4b18-ba2f-64ace569dc23.png" width="525" height="400" /> 
 
@@ -94,7 +114,7 @@ Before commencing modelling, I explored the data to explore any trends within th
     - Canada had the greatest incoming traffic, followed by Germany and Brazil.
     - Syrian Arab Republic had the greatest outcoming traffic, followed by Somalia and Nigeria.
 
-<img src="https://user-images.githubusercontent.com/96108711/150030102-31d2ced7-64f5-4bed-b1db-e5f2844a57a2.png" width="500" height="500"/> <img src="https://user-images.githubusercontent.com/96108711/150030184-825ad524-b8a5-4824-a070-70e0b900584f.png" width="500" height="500" /> 
+<img src="https://user-images.githubusercontent.com/96108711/150030102-31d2ced7-64f5-4bed-b1db-e5f2844a57a2.png" width="400" height="400"/> <img src="https://user-images.githubusercontent.com/96108711/150030184-825ad524-b8a5-4824-a070-70e0b900584f.png" width="400" height="400" /> 
 
 ## Preliminary Chi-square Test ##
 
@@ -153,9 +173,20 @@ The Random Forest Classifier performed the best on unseen data, with an accuracy
 
 It was imperative that I was able to extract the feature importances, i.e. the feature that had the greatest effect on the prediction, based on the particular model. This ruled out my KNN model as it was not possible to extract the feature importances due to how the model works.
 
+## Evaluation ##
+
+**Confusion matrix: Random Forest Classifier (top performing model)** 
+
+<img src="https://user-images.githubusercontent.com/96108711/150639812-6ba26ead-3d7b-436c-86d3-90cb1255829d.png" width="400" height="400" />
+
+**Feature Importances: Random Forest Classifier**
+
+<img src="https://user-images.githubusercontent.com/96108711/150640257-3e171474-3e73-4e54-b42f-3c5a5196ff61.png" width="400" height="700"/><img src="https://user-images.githubusercontent.com/96108711/150640287-d80ea37a-83fd-446f-8e54-542bad3b79e3.png" width="400" height="700"/>
+
+
 ## Conclusions ##
 
-The top feature importances that have the greatest influence on a person being allocated individual accommodation and not a displacement camp were as follows (highlighted by the Random Forest Classifier model): 
+The features that have the greatest influence on a person being allocated individual accommodation and not a displacement camp were as follows (highlighted by the Random Forest Classifier model above): 
 
 - Resettling in an urban location 
 - Having a legal status of refugee
@@ -165,7 +196,7 @@ The top feature importances that have the greatest influence on a person being a
 
 Essentially, this means that an individual possessing the above features will have the greatest chance of being allocated individual accommodation and not a displacement camp.
 
-Subsequently this suggests that an individual holding all or most of these named features, will have increased chances of social integration with their host community. This will not only benefit both the resettled person and host community, by preventing marginalisation and enabling resettled individuals to develop their full potential within their new community, and for peaceful co-existence.
+Subsequently this suggests that an individual holding all or most of these named features, will have increased chances of social integration within their host community. Not only will this benefit the resettled person, but also the host community, enabling resettled individuals to develop their full potential within their new community, and enocurage peaceful co-existence.
 
 Surprisingly to me, country of origin does not appear to be a major determining factor of whether a person will be allocated individual accommodation or a displacement camp. Additionally, infants aged 0-4 years old did not take priority over the other age groups (except over 60s), which **disproves** my hypothesis.
 
@@ -207,11 +238,11 @@ There are several avenues I would like to explore further with regards to this d
 
 It was great to combine many of the skills that I acquired over the duration of the General Assembly bootcamp, as well as getting hands-on experience of classic machine learning algorithms in this end-to-end independent data science project. The experience shaped my understanding of the different data science processes. I have three key learning points: 
 
-- **Data analysis will never feel complete**. There are often countless insights that can be extracted from a dataset. Similarly, there are endless ways    with which data manipulation can be carried out and for that reason, there are numerous conclusions that can be drawn from a dataset. It is         important to know when to move on from an analysis step.
+- **Data analysis will never feel complete**. There are often countless insights that can be extracted from a dataset. Similarly, there are endless ways    with which data manipulation can be carried out and for that reason, there are several different conclusions that can be drawn from a dataset. It is         important to know when to move on from an analysis step!
 
-- **EDA is there for a reason!** Admittedly, I overlooked the purpose of EDA to begin with. I learnt that valuable insights are often discovered during   the EDA process. Moreover, what is uncovered can often determine how you will manipulate your data in future steps (or conversely, going back to      cleanse your data in a more refined way).
+- **EDA is there for a reason.** Admittedly, I overlooked the purpose of EDA to begin with. I learnt that valuable insights are often discovered during   the EDA process. Moreover, what is uncovered can often determine how you will manipulate your data in future steps (or conversely, going back to      cleanse your data in a more refined way).
 
-- **Machine Learning algorithms are very sensitive to any tweaks in the data cleansing process.** This highlighted the importance of justifying the       steps carried out in the cleansing stages. This is particularly important when it comes to analysing real-world data, where the outcomes of your      model affect business decisions.
+- **Machine Learning algorithms are highly sensitive to any tweaks in the data cleansing process.** This highlighted the importance of justifying the       steps carried out in the cleansing stages. This is particularly important when it comes to analysing real-world data, where the outcomes of your      model affect business decisions.
 
 ---
 
