@@ -70,7 +70,7 @@ Cleaning and munging steps taken were as follows:
 Variable                      | Description                                    | Type of Variable
 ----------------------------- | ---------------------------------------------- | ----------------
 Country of Origin             | Orginating country                             | Categorical
-Country of Asylum             | Country the person has sought asylum in        | Catgeorical
+Country of Asylum             | Country the person sought asylum in            | Catgeorical
 Population Type	              | Type of population the person falls into. REF - Refugee, RET - Returned refugees, ASY - Asylum seekers, VDA - Venezuelans, IDP - Internally displaced persons, RDP - Returned IDPs, STA - Stateless persons, OOC - Others of Concern | Categorical
 Urban or Rural Location	      | Indication of whether the location they were allocated was urban or rural. An urban location is classified as a settlement with more than 5,000 inhabitants (defined by UNHCR)| Categorical
 Accommodation Type	          | Type of accommodation person was allocated. I - Individual accommodation, S - Self-settled camp, P - Planned/Managed camp, C - Collective centre, R - Reception/Transit camp, U - Undefined  | Categorical
@@ -179,9 +179,9 @@ It was imperative that I was able to extract the feature importances, i.e. the f
 
 <img src="https://user-images.githubusercontent.com/96108711/150639812-6ba26ead-3d7b-436c-86d3-90cb1255829d.png" width="400" height="400" />
 
-**Feature Importances**
+**Feature Importances: Random Forest Classifier**
 
-<img src="!https://user-images.githubusercontent.com/96108711/150640257-3e171474-3e73-4e54-b42f-3c5a5196ff61.png" width="400" height="700"/><img src="https://user-images.githubusercontent.com/96108711/150640287-d80ea37a-83fd-446f-8e54-542bad3b79e3.png" width="400" height="700"/>
+<img src="https://user-images.githubusercontent.com/96108711/150640257-3e171474-3e73-4e54-b42f-3c5a5196ff61.png" width="400" height="700"/><img src="https://user-images.githubusercontent.com/96108711/150640287-d80ea37a-83fd-446f-8e54-542bad3b79e3.png" width="400" height="700"/>
 
 
 ## Conclusions ##
