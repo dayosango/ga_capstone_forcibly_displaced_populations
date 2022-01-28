@@ -3,7 +3,7 @@
 
 ---
 
-## Overview ## 
+## Background ## 
 Every year, millions of people are forced to leave their home due to conflict, violence, persecution, natural hazards and human rights violations. At the end of 2020, 82.4 million people were displaced across the world. 
 
 Many of these populations are forced to flee abroad to a host country or to another region within their home country, to seek refuge and protection. 
