@@ -1,5 +1,5 @@
 
-# Predicting the Type of Accommodation Forcibly Displaced Populations Will Be Offered by their Host Community (UNHCR dataset) #
+# Predicting the Type of Accommodation Forcibly Displaced Populations Will Be Allocated by their Host Community (UNHCR dataset) #
 
 ---
 
