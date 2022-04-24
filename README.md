@@ -112,9 +112,9 @@ Before commencing modelling, I explored the data to explore any trends within th
 
 <img src="https://user-images.githubusercontent.com/96108711/150026982-e39e9921-17e2-45be-b5b6-c31efe97809e.png" width="425" height="400" /> <img src="https://user-images.githubusercontent.com/96108711/150026998-9605f7eb-8c47-41fb-b7a7-900e1a4b6559.png" width="425" height="400" /> 
 
-- Network analysis was carried out to visualise the movement of populations from the countries, specifically investigating countries that had the greatest incoming and outcoming traffic to and from **other countries**. Visuals show the connections the countries Canada and Syrian Arab Republic have with other countries.
+- Network analysis was carried out to visualise the movement of populations from the countries, specifically investigating countries that had the greatest incoming and outgoing traffic to and from **other countries**. Visuals show the connections the countries Canada and Syrian Arab Republic have with other countries.
     - Canada had the greatest incoming traffic, followed by Germany and Brazil.
-    - Syrian Arab Republic had the greatest outcoming traffic, followed by Somalia and Nigeria.
+    - Syrian Arab Republic had the greatest outgoing traffic, followed by Somalia and Nigeria.
 
 <img src="https://user-images.githubusercontent.com/96108711/150030102-31d2ced7-64f5-4bed-b1db-e5f2844a57a2.png" width="400" height="400"/> <img src="https://user-images.githubusercontent.com/96108711/150030184-825ad524-b8a5-4824-a070-70e0b900584f.png" width="400" height="400" /> 
 
